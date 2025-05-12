@@ -1,57 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS-and-ES6-skills</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://kit.fontawesome.com/2de37f9531.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/2de37f9531.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <nav class="container py-10 mx-auto">
-   <div class="navbar">
-  <div class="navbar-start">
-   
-    <img src="images/logo.webp" alt="">
-    <a class="btn btn-ghost text-3xl">Peddy</a>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal text-xl px-1">
-      <li><a>Home</a></li>
-      <li><summary>Shop</summary></li>
-      <li><a>Contact</a></li>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <a class="btn text-2xl"><i class="fa-regular fa-user"></i></a>
-  </div>
-</div>
-   </nav>
+      <div class="navbar">
+        <div class="navbar-start">
+          <img src="images/logo.webp" alt="" />
+          <a class="btn btn-ghost text-3xl">Peddy</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal text-xl px-1">
+            <li><a>Home</a></li>
+            <li><summary>Shop</summary></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn text-2xl"><i class="fa-regular fa-user"></i></a>
+        </div>
+      </div>
+    </nav>
 
-  <div class="pt-5 text-center">
-    <h4 class="text-3xl pb-5">Bringing Families Together <i class="fa-solid fa-fire "></i></h4>
-    <h2 class="text-7xl pb-8 font-bold">Your Path to Adoption Starts Here</h2>
-    <p class="text-2xl pb-5">
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking<br>
+    <div class="pt-5 text-center">
+      <h4 class="text-3xl pb-5">
+        Bringing Families Together <i class="fa-solid fa-fire"></i>
+      </h4>
+      <h2 class="text-7xl pb-8 font-bold">Your Path to Adoption Starts Here</h2>
+      <p class="text-2xl pb-5">
+        It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking<br />
         at its layout. The point of using Lorem Ipsum is that it has a.
-    </p>
-    <button class="text-3xl p-2 rounded-md m-2 bg-green-300 mx-auto mt-4">View More</button>
-    <img class="w-[900px] h-[600px] mx-auto mt-6" src="images/pet.webp" alt="">
-</div>
-   
-<div class="mb-4 bg-black-500">
+      </p>
+      <button class="text-3xl p-2 rounded-md m-2 bg-green-300 mx-auto mt-4">
+        View More
+      </button>
+      <img
+        class="w-[900px] h-[600px] mx-auto mt-6"
+        src="images/pet.webp"
+        alt=""
+      />
+    </div>
 
-</div>
-<section>
-  <div class="text-center">
-    <h3 class="text-6xl font-bold pb-10">Adopt  Your  Best Friend</h3>
-    <p class="text-2xl mb-5">It is a long established fact that a reader will be distracted by the readable content of a<br> page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
-  </div>
-  <div id="categories" class="py-4 flex gap-80 bg-gray-600 justify-center">
-
-   </div>
-</section>
-  <script src="js/home.js"></script>
-</body>
+    <div class="mb-4 bg-black-500"></div>
+    <section>
+      <div class="text-center">
+        <h3 class="text-6xl font-bold pb-10">Adopt Your Best Friend</h3>
+        <p class="text-2xl mb-5">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a<br />
+          page when looking at its layout. The point of using Lorem Ipsum is
+          that it has a.
+        </p>
+      </div>
+      <div
+        id="categories"
+        class="py-4 flex gap-80 bg-gray-600 justify-center"
+      ></div>
+    </section>
+    <main class="mx-auto">
+      <section class="flex justify-start items-start gap-4">
+        <div
+          id="pets"
+          class="w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10"
+        ></div>
+        <div id="pet-single" class="grid grid-cols-2 gap-3">
+          <div class="card bg-base-100 shadow-sm">
+            <figure class="w-[150px]">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
+            </figure>
+            
+          </div>
+          <div class="card bg-base-100 shadow-sm">
+            <figure class="w-[100px]">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
+            </figure>
+            
+          </div>
+          <div class="card bg-base-100 shadow-sm">
+            <figure class="w-[100px]">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
+            </figure>
+            
+          </div>
+          <div class="card bg-base-100 shadow-sm">
+            <figure class="w-[100px]">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
+            </figure>
+            
+          </div>
+          <div class="card bg-base-100 shadow-sm">
+            <figure class="w-[100px]">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
+            </figure>
+            
+          </div>
+          <div class="card bg-base-100 shadow-sm">
+            <figure class="w-[100px]">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
+            </figure>
+            
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/home.js"></script>
+  </body>
 </html>
