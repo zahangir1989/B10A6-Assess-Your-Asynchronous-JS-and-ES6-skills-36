@@ -72,69 +72,53 @@
       ></div>
     </section>
     <main class="mx-auto">
-      <section class="flex justify-start items-start gap-4">
-        <div
-          id="pets"
-          class="w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10"
+      <section class="flex justify-start items-start px-5 gap-4">
+        <div id="pets" class="w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10"
         ></div>
-        <div id="pet-single" class="grid grid-cols-2 gap-3">
-          <div class="card bg-base-100 shadow-sm">
-            <figure class="w-[150px]">
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
-              />
-            </figure>
-            
-          </div>
-          <div class="card bg-base-100 shadow-sm">
-            <figure class="w-[100px]">
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
-              />
-            </figure>
-            
-          </div>
-          <div class="card bg-base-100 shadow-sm">
-            <figure class="w-[100px]">
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
-              />
-            </figure>
-            
-          </div>
-          <div class="card bg-base-100 shadow-sm">
-            <figure class="w-[100px]">
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
-              />
-            </figure>
-            
-          </div>
-          <div class="card bg-base-100 shadow-sm">
-            <figure class="w-[100px]">
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
-              />
-            </figure>
-            
-          </div>
-          <div class="card bg-base-100 shadow-sm">
-            <figure class="w-[100px]">
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
-              />
-            </figure>
-            
-          </div>
+        <div class="flex flex-col md:flex-row gap-6">
+         <!-- Sticky Adopted Pets Sidebar -->
+        <div>
+        <h2 class="text-xl font-bold mb-2">Adopted Pets</h2>
+        <div id="selected-pets" class="grid grid-cols-2 gap-4 mb-10">
+          <!-- Adopted pet images will be shown here -->
         </div>
+       </div>
+       </div>
       </section>
     </main>
+<footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+  <aside>
+  <div class="flex gap-2">
+     <img src="images/logo.webp" alt="">
+   <h2>Peddy</h2>
+  </div>
+    <p>
+      ACME Industries Ltd.
+      <br />
+      Providing reliable tech since 1992
+    </p>
+  </aside>
+  <nav>
+    <h6 class="footer-title">Useful Links</h6>
+    <a class="link link-hover">Branding</a>
+    <a class="link link-hover">Design</a>
+    <a class="link link-hover">Marketing</a>
+    <a class="link link-hover">Advertisement</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Drop a Message</h6>
+    <a class="link link-hover">About us</a>
+    <a class="link link-hover">Contact</a>
+    <a class="link link-hover">Jobs</a>
+    <a class="link link-hover">Press kit</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Legal</h6>
+    <a class="link link-hover">Terms of use</a>
+    <a class="link link-hover">Privacy policy</a>
+    <a class="link link-hover">Cookie policy</a>
+  </nav>
+</footer>
     <script src="js/home.js"></script>
   </body>
 </html>
