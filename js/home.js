@@ -1,3 +1,5 @@
+
+
 // show categories
 const loadCategories = () => {
   // console.log("create category")
@@ -14,13 +16,63 @@ const loadPets = () => {
     .catch((error) => console.log(error));
 };
 
-const loadCategoruPets = (id) =>{
-  // alert(id);
-   fetch(`https://openapi.programming-hero.com/api/peddy/category/${id}`)
+// const loadDetailePets = async(petId) => {
+//   const url = `https://openapi.programming-hero.com/api/peddy/pet/${petId}`;
+//   const res = await fetch(url);
+//   const data =  await res.json();
+//   console.log(data)
+
+// }
+
+const loadDetailePets = (petId) => {
+  console.log(petId)
+
+  fetch(`https://openapi.programming-hero.com/api/peddy/pet/${petId}`)
     .then((res) => res.json())
-    .then((data) => displayPets(data.data))
+    .then((data) => displayDetailes(data.petData))
     .catch((error) => console.log(error));
 }
+
+const displayDetailes = (pet) => {
+  console.log(pet)
+  const detaileContainer = document.getElementById("modal-content");
+  detaileContainer.innerHTML=`
+  <img src=${pet.image}/>
+  <h1>Name :${pet.pet_name}</h1>
+  <h2>Title :${pet.category}</h2>
+  <h2>Price :${pet.price}</h2>
+  <p>Gender :${pet.gender}</p>
+  <p>Details :${pet.pet_details}</p>
+  `
+  // console.log(detaileContainer);
+  // // 1 namber way
+  // document.getElementById("showModalData").click();
+
+  // // 2 namber way
+  document.getElementById("costomModal").showModal();
+}
+
+
+
+const loadCategoruPets = (id) =>{
+   const allButtons = document.querySelectorAll('.category-btn');
+  allButtons.forEach((btn) => btn.classList.remove('active'));
+
+ 
+  const activeBtn = document.getElementById(`btn-${id}`);
+  if (activeBtn) {
+    activeBtn.classList.add("active");
+  }
+  
+   fetch(`https://openapi.programming-hero.com/api/peddy/category/${id}`)
+    .then((res) => res.json())
+    .then((data) => {
+    
+      displayPets(data.data)
+    })
+    .catch((error) => console.log(error));
+}
+ loadCategoruPets();
 
 const displayPets = (pets) => {
   const petContainer = document.getElementById("pets");
@@ -57,8 +109,10 @@ const displayPets = (pets) => {
         <p>Gender: ${pet.gender}</p>
         <p>Price: ${pet.price}</p>
         <div class="card-actions justify-between mt-2">
-          <button class="btn btn-primary adopt-btn">Adopt</button>
+
+          <button onclick="loadDetailePets('${pet.petId}')" class="btn btn-primary adopt-btn">Add Card</button>
           <button class="btn btn-secondary">Details</button>
+
         </div>
       </div>
     `;
@@ -95,7 +149,7 @@ const displayCategories = (categories) => {
     // create button
     const buttonContainer = document.createElement("div");
      buttonContainer.innerHTML = `
-     <button onclick="loadCategoruPets('${item.category}')" class="btn">
+     <button id="btn-${item.category}" onclick="loadCategoruPets('${item.category}')" class="btn category-btn">
      ${item.category}
      </button>
 
@@ -111,27 +165,4 @@ const displayCategories = (categories) => {
 loadCategories();
 loadPets();
 
-//
-
-//     const displayCategories = (categories) => {
-//     const categoryContainer = document.getElementById("categories");
-// categories.forEach((item) => {
-//     console.log(item);
-
-//         // create button
-//         const buttonContainer = document.createElement("div");
-//         buttonContainer.innerHTML = `
-//         <button id="btn-${item.category_id}" onclick="loadCategoryVideos(${item.category_id})" class="btn category-btn">
-//         ${item.category}
-//         </button>
-//         `
-//         // button.classList="btn";
-//         // button.innerText = item.category;
-//         // button.onclick = () => {   ababeo kora jai
-//         //     alert('hello')
-//         // }
-
-//         // add button to category container
-//         categoryContainer.append(buttonContainer);
-//     });
-// };
+  
