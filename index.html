@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <section class="px-10">
     <nav class="container py-10 mx-auto">
       <div class="navbar">
         <div class="navbar-start">
@@ -37,7 +38,7 @@
     </nav>
 
     <div class="pt-5 text-center">
-      <h4 class="text-3xl pb-5">
+      <h4 class="text-2xl pb-5">
         Bringing Families Together <i class="fa-solid fa-fire"></i>
       </h4>
       <h2 class="text-7xl pb-8 font-bold">Your Path to Adoption Starts Here</h2>
@@ -46,21 +47,21 @@
         readable content of a page when looking<br />
         at its layout. The point of using Lorem Ipsum is that it has a.
       </p>
-      <button class="text-3xl p-2 rounded-md m-2 bg-green-300 mx-auto mt-4">
+      <button class="text-3xl p-2 rounded-md m-2 bg-green-400 mx-auto mt-4">
         View More
       </button>
       <img
-        class="w-[900px] h-[600px] mx-auto mt-6"
+        class="w-[800px] h-[500px] mx-auto mt-6"
         src="images/pet.webp"
         alt=""
       />
     </div>
 
-    <div class="mb-4 bg-black-500"></div>
+   
     <section>
       <div class="text-center">
         <h3 class="text-6xl font-bold pb-10">Adopt Your Best Friend</h3>
-        <p class="text-2xl mb-5">
+        <p class="text-2xl mb-10">
           It is a long established fact that a reader will be distracted by the
           readable content of a<br />
           page when looking at its layout. The point of using Lorem Ipsum is
@@ -69,9 +70,11 @@
       </div>
       <div
         id="categories"
-        class="py-4 flex gap-80 bg-gray-600 justify-center"
+        class="py-4 flex gap-60 bg-gray-300 justify-center"
       ></div>
     </section>
+
+
     <main class="mx-auto">
       <section class="flex justify-start items-start px-5 gap-4">
         <div id="pets" class="w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10"
@@ -79,7 +82,7 @@
         <div class="flex flex-col md:flex-row gap-6">
          <!-- Sticky Adopted Pets Sidebar -->
         <div>
-        <h2 class="text-xl font-bold mb-2">Adopted Pets</h2>
+        <h2 class="text-2xl font-bold">Adopted Pets</h2>
         <div id="selected-pets" class="grid grid-cols-2 gap-4 mb-10">
           <!-- Adopted pet images will be shown here -->
         </div>
@@ -96,9 +99,7 @@
 <dialog id="costomModal" class="modal modal-bottom sm:modal-middle">
   <div class="modal-box">
     <div id="modal-content">
-
     </div>
-    
     <div class="modal-action">
       <form method="dialog">
         <!-- if there is a button in form, it will close the modal -->
@@ -108,10 +109,26 @@
   </div>
 </dialog>
 
+<!-- details modal -->
+ <button id="showModalData" class="btn hidden" onclick="costomModal1.showModal()">open modal</button>
+<dialog id="costomModal1" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="modal-content1">
+
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Ok</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
 
 
-<footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+
+<footer class="footer sm:footer-horizontal bg-gray-600 text-white p-10">
   <aside>
   <div class="flex gap-2">
      <img src="images/logo.webp" alt="">
@@ -145,5 +162,6 @@
   </nav>
 </footer>
     <script src="js/home.js"></script>
+    </section>
   </body>
 </html>

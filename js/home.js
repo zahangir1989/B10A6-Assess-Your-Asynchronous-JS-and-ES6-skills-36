@@ -39,10 +39,10 @@ const displayDetailes = (pet) => {
   detaileContainer.innerHTML=`
   <img src=${pet.image}/>
   <h1>Name :${pet.pet_name}</h1>
-  <h2>Title :${pet.category}</h2>
-  <h2>Price :${pet.price}</h2>
+  
+  
   <p>Gender :${pet.gender}</p>
-  <p>Details :${pet.pet_details}</p>
+  
   `
   // console.log(detaileContainer);
   // // 1 namber way
@@ -51,6 +51,33 @@ const displayDetailes = (pet) => {
   // // 2 namber way
   document.getElementById("costomModal").showModal();
 }
+
+// details button
+const displayDetaile = (petId) => {
+  console.log(petId)
+
+  fetch(`https://openapi.programming-hero.com/api/peddy/pet/${petId}`)
+    .then((res) => res.json())
+    .then((data) => displayDetailes2(data.petData))
+    .catch((error) => console.log(error));
+}
+
+const displayDetailes2 = (pet) => {
+  console.log(pet)
+  const detaileContainer = document.getElementById("modal-content1");
+  detaileContainer.innerHTML=`
+  <img src=${pet.image}/>
+  <h1>Name :${pet.pet_name}</h1>
+  <p>Gender :${pet.gender}</p>
+  <p>Price :${pet.price}</p>
+  <p>Date of Birth :${pet.date_of_birth}</p>
+  <p>Category :${pet.category}</p>
+  <p>Details :${pet.pet_details}</p>
+  `
+  document.getElementById("costomModal1").showModal();
+}
+
+// details end
 
 
 
@@ -111,7 +138,7 @@ const displayPets = (pets) => {
         <div class="card-actions justify-between mt-2">
 
           <button onclick="loadDetailePets('${pet.petId}')" class="btn btn-primary adopt-btn">Add Card</button>
-          <button class="btn btn-secondary">Details</button>
+          <button onclick="displayDetaile('${pet.petId}')" class="btn btn-secondary">Details</button>
 
         </div>
       </div>
